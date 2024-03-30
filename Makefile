@@ -1,8 +1,9 @@
-SWIFT_BUILD_FLAGS=--configuration release
 GIT_VERSION=$(shell git describe)
 
 build:
-	swift build -Xswiftc -enable-library-evolution -v $(SWIFT_BUILD_FLAGS)
+	swift build --configuration release -Xswiftc -Osize -Xswiftc -gnone
+	# -Xswiftc -emit-library
+		
 
 update:
 	swift package update

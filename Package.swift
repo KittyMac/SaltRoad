@@ -9,6 +9,7 @@ let package = Package(
     ],
     products: [
         .library(name: "SaltRoadFramework", targets: ["SaltRoadFramework"]),
+        .library(name: "SaltRoadFrameworkLib", type: .dynamic, targets: ["SaltRoadFramework"]),
     ],
     dependencies: [
         .package(url: "https://github.com/KittyMac/Hitch.git", from: "0.4.93"),
