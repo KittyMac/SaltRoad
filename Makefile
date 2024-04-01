@@ -3,7 +3,7 @@ GIT_VERSION=$(shell git describe)
 build:
 	swift build --configuration release -Xswiftc -Osize -Xswiftc -gnone
 	# -Xswiftc -emit-library
-		
+	cp .\.build\release\SaltRoadFrameworkLib.dll .\VSSaltRoadLib\SaltRoadLib\DLL
 
 update:
 	swift package update
