@@ -21,9 +21,7 @@ namespace WpfApp1
         {
             InitializeComponent();
 
-            var class1 = new Class1();
-
-            Console.WriteLine("HELLO WORLD");
+            new SaltRoad();
         }
     }
 }
