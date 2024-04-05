@@ -2,9 +2,9 @@ import Foundation
 import Hitch
 import Spanker
 import Sextant
+import Flynn
 
 /*
-import Flynn
 import Jib
 import Picaroon
 import Spyglass
@@ -66,7 +66,6 @@ public func jsonpath(queryUTF8: UTF8Ptr?,
     return results.toHitch().export().0
 }
 
-/*
 @_cdecl("saltroad_flynnTest")
 public func flynnTest(string: UTF8Ptr?,
                       _ returnCallback: CallbackPtr?,
@@ -78,6 +77,8 @@ public func flynnTest(string: UTF8Ptr?,
         returnCallback?(returnInfo, result.export().0)
     }
 }
+
+/*
 
 @_cdecl("saltroad_eval")
 public func eval(javascriptUTF8: UTF8Ptr?) -> UTF8Ptr? {
