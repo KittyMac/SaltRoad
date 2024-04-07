@@ -1,14 +1,19 @@
 import XCTest
 import SaltRoadFramework
 import Hitch
+import SaltRoadCPP
+import Flynn
 
 /*
-import Flynn
 import Picaroon
 import MailPacket
  */
 
 final class SaltRoadTests: XCTestCase {
+    
+    func testSaltRoadFromCPP() {
+        testSaltRoad()
+    }
     
     func testPublicSwiftFunc() {
         XCTAssertEqual(SaltRoadFramework.add(x: 40, y: 2), 42)
@@ -22,7 +27,6 @@ final class SaltRoadTests: XCTestCase {
         XCTAssertEqual(results, "[3,6,8]")
     }
     
-    /*
     func testFlynnActors() {
         let expectation = XCTestExpectation(description: "wait for result")
         let lowercase = Lowercase()
@@ -33,6 +37,7 @@ final class SaltRoadTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    /*
     func testDownload() {
         let expectation = XCTestExpectation(description: "wait for result")
         

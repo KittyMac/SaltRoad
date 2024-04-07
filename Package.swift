@@ -9,7 +9,10 @@ let package = Package(
     ],
     products: [
         .library(name: "SaltRoadFramework", targets: ["SaltRoadFramework"]),
-        .library(name: "SaltRoadFrameworkLib", type: .dynamic, targets: ["SaltRoadFramework"]),
+        .library(name: "SaltRoadFrameworkLib", type: .dynamic, targets: [
+            "SaltRoadFramework",
+            "SaltRoadCPP"
+        ]),
     ],
     dependencies: [
         .package(url: "https://github.com/KittyMac/Hitch.git", from: "0.4.93"),
@@ -28,6 +31,12 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "TestCLI"
+        ),
+        .target(
+            name: "SaltRoadCPP",
+            dependencies: [
+                "SaltRoadFramework",
+            ]
         ),
         .target(
             name: "SaltRoadFramework",
@@ -52,7 +61,10 @@ let package = Package(
         ),
         .testTarget(
             name: "SaltRoadTests",
-            dependencies: ["SaltRoadFramework"]
+            dependencies: [
+                "SaltRoadFramework",
+                "SaltRoadCPP"
+            ]
         ),
     ]
 )

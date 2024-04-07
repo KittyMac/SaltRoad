@@ -78,6 +78,15 @@ public func flynnTest(string: UTF8Ptr?,
     }
 }
 
+public class Lowercase: Actor {
+    internal func _beToLowercase(string: String) -> String {
+        return string.lowercased()
+    }
+    internal func _beToLowercase(hitch: Hitch) -> Hitch {
+        return hitch.lowercase()
+    }
+}
+
 /*
 
 @_cdecl("saltroad_eval")
@@ -160,15 +169,6 @@ public func imap() {
                       imap) { error in
             print("imap search error: \(error ?? "nil")")
         }
-    }
-}
-
-public class Lowercase: Actor {
-    internal func _beToLowercase(string: String) -> String {
-        return string.lowercased()
-    }
-    internal func _beToLowercase(hitch: Hitch) -> Hitch {
-        return hitch.lowercase()
     }
 }
  */
