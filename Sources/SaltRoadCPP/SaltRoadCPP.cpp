@@ -16,9 +16,10 @@ extern "C" void testSaltRoad();
 
 
 
-void function1Callback(std::function<void(std::string)> func, const char * resultCString) {
+void function1Callback(std::function<void(std::string)> * closure, const char * resultCString) {
     std::string cppString = resultCString;
-    func(cppString);
+    (*closure)(cppString);
+    delete closure;
 }
 
 int SaltRoadCPP::add(int a, int b) {
@@ -33,8 +34,9 @@ std::string SaltRoadCPP::jsonpath(std::string query, std::string json) {
     return saltroad_jsonpath(query.c_str(), json.c_str());
 }
 
-void SaltRoadCPP::flynnTest(std::string tolower, std::function<void(std::string)> func) {
-    saltroad_flynnTest(tolower.c_str(), (void *)function1Callback, &func);
+void SaltRoadCPP::flynnTest(std::string tolower, std::function<void(std::string)> closure) {
+    std::function<void(std::string)> * copyClosure = new std::function<void(std::string)>(closure);
+    saltroad_flynnTest(tolower.c_str(), (void *)function1Callback, copyClosure);
 }
 
 

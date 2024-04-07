@@ -13,6 +13,8 @@ final class SaltRoadTests: XCTestCase {
     
     func testSaltRoadFromCPP() {
         testSaltRoad()
+        
+        Flynn.shutdown()
     }
     
     func testPublicSwiftFunc() {
