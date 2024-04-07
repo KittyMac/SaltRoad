@@ -66,5 +66,6 @@ let package = Package(
                 "SaltRoadCPP"
             ]
         ),
-    ]
+    ],
+    cxxLanguageStandard: .gnucxx14
 )
