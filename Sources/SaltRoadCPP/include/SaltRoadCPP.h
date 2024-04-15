@@ -14,6 +14,7 @@ public:
     std::string uppercase(std::string string);
     std::string jsonpath(std::string query, std::string json);
     void flynnTest(std::string tolower, std::function<void(std::string)> func);
+    std::string eval(std::string javascript);
 };
 
 #endif

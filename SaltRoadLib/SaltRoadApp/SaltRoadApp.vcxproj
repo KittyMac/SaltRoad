@@ -145,11 +145,6 @@
     <Image Include="SaltRoadApp.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SaltRoadLib\SaltRoadLib.vcxproj">
-      <Project>{ecf4223b-f072-4de6-aa90-f29fee027ec0}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

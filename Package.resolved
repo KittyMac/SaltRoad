@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "bitbytedata",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tsolomko/BitByteData",
+      "state" : {
+        "revision" : "36df26fe4586b4f23d76cfd8b47076998343a2b2",
+        "version" : "2.0.3"
+      }
+    },
+    {
       "identity" : "chronometer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/KittyMac/Chronometer.git",
@@ -14,8 +23,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/KittyMac/Flynn.git",
       "state" : {
-        "revision" : "e578175f8a9bae50bc47926dc1b96bddc0d7a6c5",
-        "version" : "0.4.79"
+        "revision" : "bfea8ea52724291efa5320c9c954458c6f66f87c",
+        "version" : "0.4.81"
+      }
+    },
+    {
+      "identity" : "gzipswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KittyMac/GzipSwift.git",
+      "state" : {
+        "revision" : "0f5ce356dc9b75cde454caec96f9e7c2b931caae",
+        "version" : "5.3.6"
       }
     },
     {
@@ -23,8 +41,26 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/KittyMac/Hitch.git",
       "state" : {
-        "revision" : "92f32ad70b9e61807cf0cf9fa89993eac2c0dd56",
-        "version" : "0.4.130"
+        "revision" : "733c8e04e04813bc6e3cc105850a4eb657bdacfb",
+        "version" : "0.4.133"
+      }
+    },
+    {
+      "identity" : "jib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KittyMac/Jib.git",
+      "state" : {
+        "revision" : "7edb5f5f43fbf869faae08a91a051be0c0a0d6d1",
+        "version" : "0.0.81"
+      }
+    },
+    {
+      "identity" : "pamphlet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KittyMac/Pamphlet.git",
+      "state" : {
+        "revision" : "3e25564a434de6c99bba9e95c286f541500eef5e",
+        "version" : "0.3.100"
       }
     },
     {
@@ -43,6 +79,15 @@
       "state" : {
         "revision" : "96e58f68274a2e6f370fff153ceb5674a06936c4",
         "version" : "0.2.47"
+      }
+    },
+    {
+      "identity" : "swcompression",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KittyMac/SWCompression.git",
+      "state" : {
+        "revision" : "cd39ca0a3b269173bab06f68b182b72fa690765c",
+        "version" : "4.8.5"
       }
     }
   ],

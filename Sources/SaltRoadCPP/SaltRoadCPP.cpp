@@ -39,6 +39,10 @@ void SaltRoadCPP::flynnTest(std::string tolower, std::function<void(std::string)
     saltroad_flynnTest(tolower.c_str(), (void *)function1Callback, copyClosure);
 }
 
+std::string SaltRoadCPP::eval(std::string javascript) {
+    return saltroad_eval(javascript.c_str());
+}
+
 
 void testSaltRoad() {
     

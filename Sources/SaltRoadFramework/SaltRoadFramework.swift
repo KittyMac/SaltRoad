@@ -3,9 +3,9 @@ import Hitch
 import Spanker
 import Sextant
 import Flynn
+import Jib
 
 /*
-import Jib
 import Picaroon
 import Spyglass
 import Gzip
@@ -78,6 +78,13 @@ public func flynnTest(string: UTF8Ptr?,
     }
 }
 
+@_cdecl("saltroad_eval")
+public func eval(javascriptUTF8: UTF8Ptr?) -> UTF8Ptr? {
+    guard let javascriptUTF8 = javascriptUTF8 else { return nil }
+    let jib = Jib()
+    return jib[hitch: HalfHitch(utf8: javascriptUTF8)]?.export().0
+}
+
 public class Lowercase: Actor {
     internal func _beToLowercase(string: String) -> String {
         return string.lowercased()
@@ -88,13 +95,6 @@ public class Lowercase: Actor {
 }
 
 /*
-
-@_cdecl("saltroad_eval")
-public func eval(javascriptUTF8: UTF8Ptr?) -> UTF8Ptr? {
-    guard let javascriptUTF8 = javascriptUTF8 else { return nil }
-    let jib = Jib()
-    return jib[hitch: HalfHitch(utf8: javascriptUTF8)]?.export().0
-}
 
 @_cdecl("saltroad_download")
 public func download(url urlUTF8: UTF8Ptr?,
