@@ -6,7 +6,9 @@
 #include <string>
 #include <functional>
 
-class SaltRoadCPP {
+#define API __declspec(dllexport)
+
+class API SaltRoadCPP {
 private:
 
 public:
